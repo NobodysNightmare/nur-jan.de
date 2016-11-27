@@ -1,0 +1,68 @@
+
+==================================================================
+https://keybase.io/nobodysnightmare
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://nur-jan.de
+  * I am nobodysnightmare (https://keybase.io/nobodysnightmare) on keybase.
+  * I have a public key with fingerprint 88F8 C044 FA7D D5D8 4CCA  E6E4 0ADB 84E2 9C1D 9934
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "88f8c044fa7dd5d84ccae6e40adb84e29c1d9934",
+            "host": "keybase.io",
+            "key_id": "0ADB84E29C1D9934",
+            "uid": "2ccd3b65e80fc3f37ff0bd7a57bb1900",
+            "username": "nobodysnightmare"
+        },
+        "service": {
+            "hostname": "nur-jan.de",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1397682642,
+    "expire_in": 157680000,
+    "prev": "f95d4edad137bd32a23357c9ebd927bf0f1458c496e267eec885b603e7ea8932",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2.0.17 (MingW32)
+
+owE1kXtIFVkcx++9dbe6S1lSf1TassesfKTzflyqLR+BdQuz7G23mXPOXMfNmdvM
+qN11W3sIbbEshVZK0sOSJDGyMiI0pciIAhOStNuDwiJyI0LNZWOxmajzz+F8f5/f
+93x//A5PHufyuH3Ryld18bWM+37nqOxau/pjtBzIOooAfzn4FX+9FFULYSNsqJoF
+/EAQFAESDKNIPEIsEhgIJcxhhpCQLDCYEiGJRJFmQCoo1E2nw7aRJROnqbqt2Y+g
+imyVWJaVITDZlJhJZn3jS74WKAgRLXMsFggF0grNKwohI15ieVkmRYJwQBMbmlSM
+bVrTnbSmpoYKrWLJwGB3KrCrpSrETnYnwneyxFhYJGlpCNsOYUO3dKjvsPVCywr7
+nTYrEna4MiwHvzkEZVVD9vR2Qyk2TFXXgJ+0SWipjiVJizwnUBxDpQK8K6waOKg6
+BGurhH2cb3CpbamILGIwkhBJ8zKiKYmiaZaHIpaRSPGyQigkwwqQETlMcTzGUBBY
+mSNozGNJEGkKODPt1HTgZ+2YUsi2NNWQJlklzsAH3XXjXW6P6wevx9mfyzdp6vet
+3tj041hZQdvd7Lix0RPJw941LT0/kQuHpx9qhlr/uVafp3L2ndZ9P8dYk4WXMusz
+DzQZnt/XDs3MebGmsb7w6JSi3OU9u1KKkpO6IwVNN2tHTncdrzl0veHI1cw5A73P
+Aw13NufGacfkijSrNf/Zk/+7AuzSgo4lvmifIsV2tgdaIu1ecf9vZ4Ior5yMzqpJ
+fxzA/W1bq67A6rp7O859jOt4HZp3/n3Mu9j3b4J/txe3/HXmFhzhTq2LG93beHGF
+u8079HTk/uCCyn0TM/7p8y7941pK/uLngzMa+Lnr2EBeVjdtvv1zw70XSdLgzcS9
+d5d5rITOnv23xtJunw59BlVbMrvn1McMDB1efHR7+5GpSTObz55MBF0Hk3dPqF/f
+m8GN32PkXv5l4+uHkeb4ipyUlaDD1VL7b4TP+5x9IStxwZKLMzoPNJa8BbPSYx+e
+JVf5n4XLtkXN4JtLfRXV/TkfHozrm+aBmEmYpD/WawLzmUUDycNWQny6MveR0v9f
++qeVvTu9J69/AQ==
+=RnKk
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/nobodysnightmare
+
+==================================================================
