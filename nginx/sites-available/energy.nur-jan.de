@@ -24,7 +24,11 @@ server {
 
         server_name energy.nur-jan.de;
 
-        location / {
-                proxy_pass http://unix:/home/www-app/energy/tmp/puma/sock:/;
+
+        root /home/www-app/energy/public;
+        try_files $uri @app_server;
+
+        location @app_server {
+                proxy_pass http://unix:/home/www-app/energy/tmp/puma/sock:;
         }
 }
