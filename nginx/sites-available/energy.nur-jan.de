@@ -24,7 +24,6 @@ server {
 
         server_name energy.nur-jan.de;
 
-
         root /home/www-app/energy/public;
         try_files $uri @app_server;
 
