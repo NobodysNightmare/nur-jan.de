@@ -1,0 +1,12 @@
+$TTL 60;
+
+@       IN SOA    nur.jan.de. ich.nur-jan.de. (
+                  2018022802
+                          24h
+                          2h
+                          1000h
+                          1m
+                  )
+
+@       IN NS nur-jan.de.
+@       IN A  81.169.132.195
