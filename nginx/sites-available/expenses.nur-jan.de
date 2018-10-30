@@ -1,0 +1,33 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name expenses.nur-jan.de;
+
+        location /.well-known/acme-challenge {
+                root /var/www/letsencrypt/expenses.nur-jan.de;
+        }
+
+        location / {
+                return 301 https://$host$request_uri;
+        }
+}
+
+server {
+        listen 443 ssl;
+        listen [::]:443 ssl;
+
+        ssl_certificate /etc/letsencrypt/live/nur-jan.de/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/nur-jan.de/privkey.pem;
+
+        add_header Strict-Transport-Security max-age=31536000;
+
+        server_name expenses.nur-jan.de;
+
+        root /home/www-app/expenses/public;
+        try_files $uri @app_server;
+
+        location @app_server {
+                proxy_pass http://unix:/home/www-app/expenses/tmp/puma/sock:;
+        }
+}
