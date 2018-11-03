@@ -24,11 +24,9 @@ server {
 
         server_name nur-jan.de;
 
-        location / {
-                root /var/www/nur-jan.de;
-                index index.html;
-                try_files $uri $uri/ =404;
-        }
+        root /var/www/nur-jan.de;
+        index index.html;
+        try_files $uri $uri/ =404;
 
         location /backups {
                 auth_basic           "Backup Files";
