@@ -1,1 +1,1 @@
-mysqldump --databases energy sprit dynamic_dns > db_dumps.sql
+mysqldump --databases dynamic_dns energy expenses grafana sprit | gzip > /var/www/nur-jan.de/backups/databases.sql.gz
