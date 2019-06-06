@@ -1,0 +1,30 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name lan.nur-jan.de;
+
+        location /.well-known/acme-challenge {
+                root /var/www/letsencrypt/lan.nur-jan.de;
+        }
+
+        location / {
+                return 301 https://$host$request_uri;
+        }
+}
+
+server {
+        listen 443 ssl;
+        listen [::]:443 ssl;
+
+        ssl_certificate /etc/letsencrypt/live/nur-jan.de/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/nur-jan.de/privkey.pem;
+
+        add_header Strict-Transport-Security max-age=31536000;
+
+        server_name lan.nur-jan.de;
+
+        root /var/www/lan.nur-jan.de;
+        index index.html;
+        try_files $uri $uri/ =404;
+}

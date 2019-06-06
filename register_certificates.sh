@@ -5,3 +5,4 @@ letsencrypt certonly --expand --webroot \
   -w /var/www/letsencrypt/dyn.nur-jan.de/ -d dyn.nur-jan.de \
   -w /var/www/letsencrypt/grafana.nur-jan.de/ -d grafana.nur-jan.de \
   -w /var/www/letsencrypt/expenses.nur-jan.de/ -d expenses.nur-jan.de
+  -w /var/www/letsencrypt/lan.nur-jan.de/ -d lan.nur-jan.de
