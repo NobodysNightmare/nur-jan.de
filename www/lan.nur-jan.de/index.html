@@ -3,8 +3,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="fontawesome/css/solid.min.css">
     <link rel="shortcut icon" type="image/png" href="favicon.png"/>
     <title>Nur LAN</title>
+
+    <script src="jquery.min.js"></script>
+    <script>
+      $(function() {
+        let button = $("#reserveChairButton");
+
+        setTimeout(function() {
+          $("#remainingComputersText").text("Ausverkauft");
+        }, 1500);
+
+        setTimeout(function() {
+          if(localStorage.getItem("soldOut")) {
+            $("#remainingChairsText").text("Ausverkauft");
+          } else {
+            $("#remainingChairsText").text("1 verfügbar");
+            button.removeClass("collapse");
+          }
+        }, 3000);
+
+        button.click(function() {
+          button.find("i").removeClass("collapse");
+          button.attr("disabled", true);
+          localStorage.setItem("soldOut", true);
+          setTimeout(function() {
+            window.location = "chairCheckout.html";
+          }, 10000);
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="container">
@@ -131,7 +162,7 @@
           <tr>
             <td>High-End Rechner</td>
             <td>Du musst keinen eigenen PC mitbringen. Einfach an einen vorkonfigurierten Rechner setzen und loszocken!</td>
-            <td>Ausverkauft</td>
+            <td><span id="remainingComputersText"><i class="fa fa-spinner fa-pulse"></i></span></td>
           </tr>
 
           <tr>
@@ -140,7 +171,13 @@
               Während die normalen Stühle natürlich großartig sind, kannst du auch
               in einen noch großartigeren Stuhl investieren.
             </td>
-            <td>Ausverkauft</td>
+            <td>
+              <span id="remainingChairsText"><i class="fa fa-spinner fa-pulse"></i></span>
+              <button class="btn btn-primary collapse" id="reserveChairButton">
+                <i class="fa fa-spinner fa-pulse collapse"></i>
+                Reservieren
+              </button>
+            </td>
           </tr>
         </table>
       </div>
