@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql
+    restart: always
+    env_file: .env
+    volumes:
+    - "mysql_data:/var/lib/mysql"
+    networks:
+      backend:
+        aliases:
+        - "mysql"
+
+networks:
+  backend:
+    external:
+      name: backend
+
+volumes:
+  mysql_data:
+
