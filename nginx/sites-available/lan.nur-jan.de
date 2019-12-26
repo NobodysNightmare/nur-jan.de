@@ -17,8 +17,8 @@ server {
         listen 443 ssl;
         listen [::]:443 ssl;
 
-        ssl_certificate /etc/letsencrypt/live/nur-jan.de/fullchain.pem;
-        ssl_certificate_key /etc/letsencrypt/live/nur-jan.de/privkey.pem;
+        ssl_certificate /etc/letsencrypt/live/lan.nur-jan.de/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/lan.nur-jan.de/privkey.pem;
 
         add_header Strict-Transport-Security max-age=31536000;
 
