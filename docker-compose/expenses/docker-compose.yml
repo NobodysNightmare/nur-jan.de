@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  web:
+    image: nobodysnightmare/expenses
+    restart: always
+    env_file: .env
+    networks:
+      backend:
+    ports:
+    - "8081:3000"
+
+networks:
+  backend:
+    external:
+      name: backend
+
