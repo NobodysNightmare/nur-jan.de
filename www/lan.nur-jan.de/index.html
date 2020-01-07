@@ -18,7 +18,7 @@
         }, 1500);
 
         setTimeout(function() {
-          if(localStorage.getItem("soldOut")) {
+          if(localStorage.getItem("soldOut2020")) {
             $("#remainingChairsText").text("Ausverkauft");
           } else {
             $("#remainingChairsText").text("1 verfügbar");
@@ -29,7 +29,7 @@
         button.click(function() {
           button.find("i").removeClass("collapse");
           button.attr("disabled", true);
-          localStorage.setItem("soldOut", true);
+          localStorage.setItem("soldOut2020", true);
           setTimeout(function() {
             window.location = "chairCheckout.html";
           }, 10000);
@@ -45,17 +45,13 @@
         </div>
         <div class="card-body">
           <p>
-            Dies ist deine exklusive Einladung zur "Nur LAN", die größte LAN-Party die je
-            in meiner Garage stattgefunden hat.
+            Dies ist deine exklusive Einladung zur "Nur LAN", die größte regelmäßige
+            LAN-Party in meiner Garage.
           </p>
 
           <p>
-            Die Party steigt am <strong>07.09.2019</strong>.
+            Die Party steigt vom <strong>11.09.2020 bis 13.09.2020</strong>.
           </p>
-
-          <div class="d-flex justify-content-center">
-            <a href="https://doodle.com/poll/ndtd5qhdxzccda9z" target="_blank" class="btn btn-primary btn-lg my-3">Teilnahme bestätigen</a>
-          </div>
         </div>
       </div>
 
@@ -90,7 +86,7 @@
         <table class="table">
           <thead class="thead-light">
             <tr>
-              <th colspan="2">Freitag, 06.09.2019 (für Early Birds)</th>
+              <th colspan="2">Freitag, 11.09.2020</th>
             </tr>
           </thead>
           <tr>
@@ -99,17 +95,17 @@
           </tr>
           <tr>
             <td>20:30</td>
-            <td>Filmvorführung</td>
+            <td>Filmvorführung oder einfach loszocken</td>
           </tr>
 
           <thead class="thead-light">
             <tr>
-              <th colspan="2">Samstag, 07.09.2019</th>
+              <th colspan="2">Samstag, 12.09.2020</th>
             </tr>
           </thead>
           <tr>
             <td>09:00</td>
-            <td>regulärer Check-in</td>
+            <td>Check-in für Nachzügler</td>
           </tr>
           <tr>
             <td>11:00</td>
@@ -118,7 +114,7 @@
 
           <thead class="thead-light">
             <tr>
-              <th colspan="2">Sonntag, 08.09.2019</th>
+              <th colspan="2">Sonntag, 13.09.2020</th>
             </tr>
           </thead>
           <tr>
