@@ -1,0 +1,16 @@
+version: '3.2'
+
+services:
+  ts3:
+    image: teamspeak
+    restart: always
+    volumes:
+    - type: volume
+      source: ts3_data
+      target: /var/ts3server
+    ports:
+    - "9987:9987/udp"
+    - "10011:10011"
+    - "30033:30033"
+    environment:
+      TS3SERVER_LICENSE: accept
