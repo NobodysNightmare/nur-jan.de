@@ -28,8 +28,8 @@ services:
       target: "/var/www"
       read_only: true
     - type: bind
-      source: "/etc/letsencrypt/live"
-      target: "/etc/letsencrypt/live"
+      source: "/etc/letsencrypt"
+      target: "/etc/letsencrypt"
       read_only: true
     - type: bind
       source: "./dhparam.pem"
