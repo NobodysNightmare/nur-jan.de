@@ -1,0 +1,5 @@
+# Note that using symlinks is tricky in
+# docker. Alternatively we can just include
+# available sites from here, e.g.
+#
+#    include sites-available/nur-jan.de;

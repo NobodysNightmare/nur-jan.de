@@ -1,4 +1,8 @@
-/www/nur-jan.de/backups/*
-!/www/nur-jan.de/backups/.keep
-
 docker-compose/*/.env
+docker-compose/nginx/dhparam.pem
+
+nginx/sites-enabled/*
+!nginx/sites-enabled/README
+
+www/nur-jan.de/backups/*
+!www/nur-jan.de/backups/.keep

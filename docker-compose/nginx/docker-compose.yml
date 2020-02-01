@@ -1,0 +1,45 @@
+version: '3.2'
+
+services:
+  proxy:
+    image: nginx
+    restart: always
+    networks:
+      frontend:
+    volumes:
+    - type: bind
+      source: "../../nginx/nginx.conf"
+      target: "/etc/nginx/nginx.conf"
+      read_only: true
+    - type: bind
+      source: "../../nginx/conf.d"
+      target: "/etc/nginx/conf.d"
+      read_only: true
+    - type: bind
+      source: "../../nginx/sites-enabled"
+      target: "/etc/nginx/sites-enabled"
+      read_only: true
+    - type: bind
+      source: "../../nginx/sites-available"
+      target: "/etc/nginx/sites-available"
+      read_only: true
+    - type: bind
+      source: "../../www"
+      target: "/var/www"
+      read_only: true
+    - type: bind
+      source: "/etc/letsencrypt/live"
+      target: "/etc/letsencrypt/live"
+      read_only: true
+    - type: bind
+      source: "./dhparam.pem"
+      target: "/etc/ssl/certs/dhparam.pem"
+      read_only: true
+    ports:
+    - "80:80"
+    - "443:443"
+
+networks:
+  frontend:
+    external:
+      name: frontend
