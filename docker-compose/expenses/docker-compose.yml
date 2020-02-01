@@ -7,11 +7,14 @@ services:
     env_file: .env
     networks:
       backend:
-    ports:
-    - "8081:3000"
+      frontend:
+        aliases:
+        - "expenses"
 
 networks:
   backend:
     external:
       name: backend
-
+  frontend:
+    external:
+      name: frontend

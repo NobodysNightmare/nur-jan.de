@@ -24,10 +24,7 @@ server {
 
         server_name expenses.nur-jan.de;
 
-        root /home/www-app/expenses/public;
-        try_files $uri @app_server;
-
-        location @app_server {
-                proxy_pass http://unix:/home/www-app/expenses/tmp/puma/sock:;
+        location / {
+                proxy_pass http://expenses:3000;
         }
 }
