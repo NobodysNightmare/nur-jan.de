@@ -24,10 +24,7 @@ server {
 
         server_name sprit.nur-jan.de;
 
-        root /home/www-app/sprit/public;
-        try_files $uri @app_server;
-
-        location @app_server {
-                proxy_pass http://unix:/home/www-app/sprit/tmp/puma/sock:;
+        location / {
+                proxy_pass http://sprit:3000;
         }
 }

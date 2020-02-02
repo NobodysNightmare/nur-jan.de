@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  web:
+    image: nobodysnightmare/sprit
+    restart: always
+    env_file: .env
+    networks:
+      backend:
+      frontend:
+        aliases:
+        - "sprit"
+
+networks:
+  backend:
+    external:
+      name: backend
+  frontend:
+    external:
+      name: frontend
