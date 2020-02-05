@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  web:
+    image: nobodysnightmare/energy
+    restart: always
+    env_file: .env
+    networks:
+      backend:
+      frontend:
+        aliases:
+        - "energy"
+
+networks:
+  backend:
+    external:
+      name: backend
+  frontend:
+    external:
+      name: frontend
