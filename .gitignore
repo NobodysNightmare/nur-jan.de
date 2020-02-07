@@ -1,6 +1,9 @@
 docker-compose/*/.env
 docker-compose/nginx/dhparam.pem
 
+nginx/htpasswd.d/*
+!nginx/htpasswd.d/.keep
+
 nginx/sites-enabled/*
 !nginx/sites-enabled/README
 

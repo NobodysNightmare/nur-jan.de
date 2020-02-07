@@ -30,6 +30,6 @@ server {
 
         location /backups {
                 auth_basic           "Backup Files";
-                auth_basic_user_file /etc/nginx/.htpasswd-backups;
+                auth_basic_user_file /etc/nginx/htpasswd.d/backups;
         }
 }
