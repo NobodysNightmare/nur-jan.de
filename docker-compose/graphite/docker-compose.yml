@@ -1,0 +1,26 @@
+version: '3.2'
+
+services:
+  db:
+    image: graphiteapp/graphite-statsd
+    restart: always
+    volumes:
+    - type: volume
+      source: "data"
+      target: "/opt/graphite/storage"
+    - type: bind
+      source: "../../graphite/config"
+      target: "/opt/graphite/conf"
+      read_only: true
+    networks:
+      backend:
+        aliases:
+        - "graphite"
+
+networks:
+  backend:
+    external:
+      name: backend
+
+volumes:
+  data:
