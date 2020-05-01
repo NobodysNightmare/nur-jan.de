@@ -24,10 +24,7 @@ server {
 
         server_name grafana.nur-jan.de;
 
-        root /usr/share/grafana/public/;
-        try_files $uri @app_server;
-
-        location @app_server {
-                proxy_pass http://localhost:3000;
+        location / {
+                proxy_pass http://grafana:3000;
         }
 }
