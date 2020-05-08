@@ -1,7 +1,0 @@
-include "/etc/bind/dyndns-key.dyn.nur-jan.de.conf";
-
-zone "dyn.nur-jan.de" IN {
-  type master;
-  file "/var/lib/bind/db.dyn.nur-jan.de";
-  update-policy { grant dyndns-key.dyn.nur-jan.de zonesub ANY; };
-};
