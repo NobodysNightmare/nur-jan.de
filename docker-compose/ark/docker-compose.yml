@@ -10,10 +10,10 @@ services:
     - "7778:7778/udp"
     - "27015:27015"
     - "27015:27015/udp"
-  volumes:
-  - type: volume
-    source: "data"
-    target: "/ark"
+    volumes:
+    - type: volume
+      source: "data"
+      target: "/ark"
 
 volumes:
   data:
