@@ -1,0 +1,19 @@
+version: '3.2'
+
+services:
+  server:
+    image: turzam/ark
+    restart: unless-stopped
+    env_file: .env
+    ports:
+    - "7778:7778"
+    - "7778:7778/udp"
+    - "27015:27015"
+    - "27015:27015/udp"
+  volumes:
+  - type: volume
+    source: "data"
+    target: "/ark"
+
+volumes:
+  data:
