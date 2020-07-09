@@ -1,0 +1,19 @@
+version: '3.2'
+
+services:
+  server:
+    image: itzg/minecraft-server
+    restart: unless-stopped
+    ports:
+    - "25565:25565"
+    volumes:
+    - type: volume
+      source: "data"
+      target: "/data"
+    env_file: .env
+    environment:
+      EULA: "TRUE"
+      VERSION: "1.16.1"
+
+volumes:
+  data:
