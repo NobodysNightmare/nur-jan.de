@@ -4,3 +4,4 @@ certbot certonly --webroot -w /home/jan/config-repo/www/letsencrypt/energy.nur-j
 certbot certonly --webroot -w /home/jan/config-repo/www/letsencrypt/grafana.nur-jan.de/ -d grafana.nur-jan.de
 certbot certonly --webroot -w /home/jan/config-repo/www/letsencrypt/expenses.nur-jan.de/ -d expenses.nur-jan.de
 certbot certonly --webroot -w /home/jan/config-repo/www/letsencrypt/lan.nur-jan.de/ -d lan.nur-jan.de
+certbot certonly --webroot -w /home/jan/config-repo/www/letsencrypt/screeps.nur-jan.de/ -d screeps.nur-jan.de

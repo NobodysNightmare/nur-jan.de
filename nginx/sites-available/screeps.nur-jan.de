@@ -1,0 +1,30 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name screeps.nur-jan.de;
+
+        location /.well-known/acme-challenge {
+                root /var/www/letsencrypt/screeps.nur-jan.de;
+        }
+
+        location / {
+                return 301 https://$host$request_uri;
+        }
+}
+
+server {
+        listen 443 ssl;
+        listen [::]:443 ssl;
+
+        ssl_certificate /etc/letsencrypt/live/screeps.nur-jan.de/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/screeps.nur-jan.de/privkey.pem;
+
+        add_header Strict-Transport-Security max-age=31536000;
+
+        server_name screeps.nur-jan.de;
+
+        location / {
+                proxy_pass http://screeps:21025;
+        }
+}

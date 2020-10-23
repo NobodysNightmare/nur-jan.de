@@ -7,6 +7,11 @@ services:
     volumes:
     - ./config.yml:/screeps/config.yml
     - screeps-data:/screeps
+    networks:
+      default:
+      frontend:
+        aliases:
+        - "screeps"
     env_file: .env
     environment:
       MONGO_HOST: mongo
@@ -32,3 +37,8 @@ volumes:
   redis-data:
   mongo-data:
   screeps-data:
+
+networks:
+  frontend:
+    external:
+      name: frontend
