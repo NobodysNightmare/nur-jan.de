@@ -1,0 +1,25 @@
+version: latest
+mods:
+- screepsmod-mongo
+- screepsmod-admin-utils
+- screepsmod-map-tool
+bots:
+  simplebot: "screepsbot-zeswarm"
+  overmind: "./bots/overmind/dist"
+extraPackages:
+  morgan: "*"
+localMods: ./mods
+backup:
+  dirs:
+  - tests
+  - bots/overmind
+serverConfig:
+  welcomeText:  |
+    <style>.motd-nn h1{  text-align: center; }</style>
+    <div class="motd-nn">
+    <h1>Test Server</h1>
+      Welcome to my private server.
+    </div>
+  constants:
+    TEST_CONSTANT: 123
+  tickRate: 500

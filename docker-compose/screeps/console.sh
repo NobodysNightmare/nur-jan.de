@@ -1,1 +1,1 @@
-docker-compose exec server npx screeps cli
+docker-compose exec screeps screeps-launcher cli
