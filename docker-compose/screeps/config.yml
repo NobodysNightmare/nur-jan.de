@@ -17,9 +17,9 @@ serverConfig:
   welcomeText:  |
     <style>.motd-nn h1{  text-align: center; }</style>
     <div class="motd-nn">
-    <h1>Test Server</h1>
-      Welcome to my private server.
+    <h1>nur-jan.de Screeps</h1>
+      This is my personal Screeps Test Server.
     </div>
   constants:
     TEST_CONSTANT: 123
-  tickRate: 500
+  tickRate: 2000
