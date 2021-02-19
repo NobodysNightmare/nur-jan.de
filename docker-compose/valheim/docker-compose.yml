@@ -11,7 +11,7 @@ services:
     environment:
       - PORT=2456
       - NAME="nur-jan.de Valheim"
-      - WORLD="Dedicated"
+      - WORLD="miep1"
       - TZ=Europe/Berlin
       - PUBLIC=0
       - AUTO_UPDATE=1
