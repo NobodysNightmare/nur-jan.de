@@ -2,6 +2,8 @@ docker-compose/*/.env
 docker-compose/nginx/dhparam.pem
 
 docker-compose/valheim/valheim/
+docker-compose/eco/mount/Config/*.eco
+docker-compose/eco/mount/Storage/
 
 nginx/htpasswd.d/*
 !nginx/htpasswd.d/.keep

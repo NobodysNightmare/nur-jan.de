@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  server:
+    image: strangeloopgames/eco-game-server:latest
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: ./mount/Storage/
+        target: /app/Storage/
+      - type: bind
+        source: ./mount/Config/
+        target: /app/Config/
+    ports:
+      - "3000:3000/udp"
+      - "3001:3001/tcp"
+    networks:
+        frontend:
+          aliases:
+          - "eco"
+
+networks:
+    frontend:
+        external:
+            name: frontend
