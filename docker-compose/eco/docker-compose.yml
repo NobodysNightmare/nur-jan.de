@@ -10,7 +10,7 @@ services:
         target: /app/Storage/
       - type: bind
         source: ./mount/Config/
-        target: /app/Config/
+        target: /app/Configs/
     ports:
       - "3000:3000/udp"
       - "3001:3001/tcp"
