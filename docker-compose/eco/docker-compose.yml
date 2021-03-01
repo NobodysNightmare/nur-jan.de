@@ -14,12 +14,3 @@ services:
     ports:
       - "3000:3000/udp"
       - "3001:3001/tcp"
-    networks:
-        frontend:
-          aliases:
-          - "eco"
-
-networks:
-    frontend:
-        external:
-            name: frontend
