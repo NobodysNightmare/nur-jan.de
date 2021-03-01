@@ -1,16 +1,16 @@
 {
-  "PublicServer": false,  
+  "PublicServer": false,
   "Playtime": "",
   "DiscordAddress": "",
   "Password": "",
-  "Description": "",
+  "Description": "nur-jan.de Eco Server",
   "DetailedDescription": "",
   "ServerCategory": "None",
   "IPAddress": "Any",
-  "RemoteAddress": "",
+  "RemoteAddress": "nur-jan.de:3000/",
   "GameServerPort": 3000,
   "WebServerPort": 3001,
   "Rate": 20,
-  "MaxConnections": -1,  
-  "UPnPEnabled": true
+  "MaxConnections": -1,
+  "UPnPEnabled": false
 }
